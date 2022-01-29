@@ -1260,11 +1260,9 @@ endif
 dont_bother_goals := out product-graph
 
 ifneq ($(KOSP_BUILD),)
-ifneq ($(wildcard device/lineage/sepolicy/common/sepolicy.mk),)
 ## We need to be sure the global selinux policies are included
 ## last, to avoid accidental resetting by device configs
-$(eval include device/lineage/sepolicy/common/sepolicy.mk)
-endif
+$(eval include device/kosp/sepolicy/common/sepolicy.mk)
 endif
 
 # Make ANDROID Soong config variables visible to Android.mk files, for
